@@ -71,6 +71,13 @@ public class User {
     // Pending AWS...
 	private String profile_pic;
 	
+	public User(String username, String email, String phone, String password) {
+		this.username = username;
+		this.email = email;
+		this.phone = phone;
+		this.password = password;
+	}
+	
 	@Getter
 	@Setter
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
